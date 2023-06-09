@@ -1,0 +1,69 @@
+<div class="wrapper">
+  <div class="header">
+    <p class="header__text">
+      Here you can learn more about topics related to "Information web service
+      technology of online e-commerce system"
+    </p>
+  </div>
+  <div class="menu-bar">
+    <a class="menu-bar__option" routerLinkActive="active" routerLink="/home"
+      >Home</a
+    >
+    <a class="menu-bar__option" routerLinkActive="active" routerLink="/big-data"
+      >Big Data and BDA</a
+    >
+    <a
+      class="menu-bar__option"
+      routerLinkActive="active"
+      routerLink="/dynamic-content"
+      >Dynamic content</a
+    >
+    <a
+      class="menu-bar__option"
+      routerLinkActive="active"
+      routerLink="/neuromarketing"
+      >neuromarketing</a
+    >
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="btn-panel">
+    <button
+      type="button"
+      class="btn-panel__btn"
+      (click)="onBackClick()"
+      [disabled]="isBackButtonDisabled$ | async"
+    >
+      <img
+        class="btn-panel__btn__img rotate"
+        src="../assets/icons/arrow-icon.svg"
+        alt="Back Arrow"
+      />
+      <p class="btn-pannel__btn__text">Back</p>
+    </button>
+    <button
+      type="button"
+      class="btn-panel__btn"
+      (click)="onForwardClick()"
+      [disabled]="isForwardButtonDisabled$ | async"
+    >
+      <p class="btn-pannel__btn__text">Forward</p>
+      <img
+        class="btn-panel__btn__img"
+        src="../assets/icons/arrow-icon.svg"
+        alt="Forward Arrow"
+      />
+    </button>
+  </div>
+  <div class="footer">
+    <div class="footer__personal-info">
+      My name is Denys Podanenko. I am a first year student at Taras Shevchenko
+      National University of Kyiv. I study IT at the Faculty of Information
+      Technology, Computer Science specialization.
+    </div>
+    <div class="footer__contacts">
+      Telegram: @trentProtector GMail: d.podanenko@gmail.com
+    </div>
+  </div>
+</div>
